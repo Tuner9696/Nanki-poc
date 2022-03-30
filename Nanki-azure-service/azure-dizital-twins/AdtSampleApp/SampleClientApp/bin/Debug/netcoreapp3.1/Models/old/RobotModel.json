@@ -1,0 +1,107 @@
+{
+  "@id": "dtmi:neccom:DigitalTwins:Robot;1",
+  "@type": "Interface",
+  "displayName": "Robot interface model",
+  "@context": "dtmi:dtdl:context;2",
+  "contents": [
+    {
+      "@type": "Property",
+      "name": "DisplayName",
+      "schema": "string"
+    },
+    {
+      "@type": "Property",
+      "name": "DeviceInfo",
+      "schema": {
+        "@type": "Object",
+        "fields": [
+          {
+            "name": "Vendor",
+            "schema": "string"
+          },
+          {
+            "name": "DeviceType",
+            "schema": "string"
+          },
+          {
+            "name": "ProdutName",
+            "schema": "string"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Property",
+      "name": "DeviceStatus",
+      "schema": {
+        "@type": "Object",
+        "fields": [
+          {
+            "@type": "Property",
+            "name": "Status",
+            "schema": "string"
+          },
+          {
+            "@type": "Property",
+            "name": "PositoinX",
+            "schema": "double"
+          },
+          {
+            "@type": "Property",
+            "name": "PositoinY",
+            "schema": "double"
+          },
+          {
+            "@type": "Property",
+            "name": "PositoinZ",
+            "schema": "double"
+          },
+          {
+            "@type": "Property",
+            "name": "Location",
+            "schema": "string"
+          },
+          {
+            "@type": "Property",
+            "name": "Voltage",
+            "schema": "double"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Relationship",
+      "name": "contains",
+      "displayName": "contains",
+      "properties": [
+        {
+          "name": "ownershipUser",
+          "@type": "Property",
+          "schema": "string"
+        },
+        {
+          "name": "ownershipDepartment",
+          "@type": "Property",
+          "schema": "string"
+        }
+      ]
+    },
+    {
+      "@type": "Relationship",
+      "name": "serves",
+      "displayName": "serves",
+      "properties": [
+        {
+          "name": "ownershipUser",
+          "@type": "Property",
+          "schema": "string"
+        },
+        {
+          "name": "ownershipDepartment",
+          "@type": "Property",
+          "schema": "string"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+    <launch>
+        <node pkg="iothub-client" name="Statuspub" type="status_pub.py"/>
+        
+    </launch>

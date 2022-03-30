@@ -1,0 +1,2 @@
+export CONNECTION_STRING="HostName=NS-IoTHub.azure-devices.net;DeviceId=NS-MEC;SharedAccessKey=sQpC7j1DcqCg6dVRtbBuk/PLYvoCI0hTcYobdirJZ7w="
+

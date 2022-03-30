@@ -1,0 +1,13 @@
+{
+  "@id": "dtmi:example:Section;1",
+  "@type": "Interface",
+  "displayName": "Section",
+  "contents": [
+    {
+      "@type": "Property",
+      "name": "SectionName",
+      "schema": "string"
+    }
+  ],
+  "@context": "dtmi:dtdl:context;2"
+}

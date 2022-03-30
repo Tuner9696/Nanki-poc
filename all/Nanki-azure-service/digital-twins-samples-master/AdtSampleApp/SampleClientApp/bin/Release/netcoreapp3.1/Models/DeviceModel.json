@@ -1,0 +1,63 @@
+{
+  "@id": "dtmi:com:nec:example:Device;1",
+  "@type": "Interface",
+  "displayName": "Device interface model",
+  "@context": "dtmi:dtdl:context;2",
+  "contents": [
+    {
+      "@type": "Property",
+      "name": "DisplayName",
+      "schema": "string"
+    },
+    {
+      "@type": "Property",
+      "name": "Vendor",
+      "schema": "string"
+    },
+    {
+      "@type": "Property",
+      "name": "DeviceType",
+      "schema": "string"
+    },
+    {
+      "@type": "Property",
+      "name": "ProdutName",
+      "schema": "string"
+    },
+    {
+      "@type": "Property",
+      "name": "Status",
+      "schema": "string"
+    },
+    {
+      "@type": "Property",
+      "name": "PositionX",
+      "schema": "double"
+    },
+    {
+      "@type": "Property",
+      "name": "PositionY",
+      "schema": "double"
+    },
+    {
+      "@type": "Property",
+      "name": "PositionZ",
+      "schema": "double"
+    },
+    {
+      "@type": "Property",
+      "name": "Angle",
+      "schema": "double"
+    },
+    {
+      "@type": "Property",
+      "name": "Location",
+      "schema": "string"
+    },
+    {
+      "@type": "Property",
+      "name": "Voltage",
+      "schema": "double"
+    }
+  ]
+}

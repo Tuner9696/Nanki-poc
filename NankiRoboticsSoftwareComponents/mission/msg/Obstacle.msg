@@ -1,0 +1,5 @@
+int32 obstacle_flg
+float64 obstacle_angle_tf
+float64 obstacle_distance
+int32 obstacle_num
+ObstacleInformation[] obstacle_info

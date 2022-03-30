@@ -1,0 +1,11 @@
+
+
+{
+    "name":"Azure",
+    "mission_trigger":"False",
+    "remote_trigger":"True",
+    "x":"1",
+    "y":"5",
+    "degree": "3"
+
+}

@@ -1,0 +1,17 @@
+{
+  "@id": "dtmi:com:nec:example:Nanki;2",
+  "@type": "Interface",
+  "displayName": "Nanki",
+  "contents": [
+    {
+      "@type": "Property",
+      "name": "Location",
+      "schema": "double"
+    },
+    {
+      "@type": "Relationship",
+      "name": "contains"
+    }
+  ],
+  "@context": "dtmi:dtdl:context;2"
+}

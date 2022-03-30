@@ -1,0 +1,1 @@
+int32 lifter_control_kind

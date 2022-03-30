@@ -1,0 +1,20 @@
+{
+  "@id": "dtmi:com:nec:example:Airport;1",
+  "@type": "Interface",
+  "displayName": "Airport interface model",
+  "@context": "dtmi:dtdl:context;2",
+  "contents": [
+    {
+      "@type": "Property",
+      "name": "DisplayName",
+      "schema": "string"
+    },
+    {
+      "@type": "Relationship",
+      "@id": "dtmi:com:nec:example:Airport:res_has_floors;1",
+      "name": "rel_has_floors",
+      "displayName": "Airport has floors",
+      "target": "dtmi:com:nec:example:Floor;1"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+■起動方法
+
+catkin_make
+source devel/setup.bash
+cd src/iothub_client/script
+python3 main.py
+
+
+■使用上注意点
+
+◎iothubの接続文字列はそれぞれの試験用PCの.bashrcに記載してください。
+例）下記のように記載してください。
+export CONNECTION_STRING="HostName=NS-IoTHub.azure-devices.net;Devhogehogehogehogheo"
+
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+最終的な本番用は下記の設定は不要です
+
+◎注意、system_define.pyの３４行目以降を単体試験の内容によって変更してください。
+デフォルトでは起動するとミッション制御開始トリガーを発行。ミッション制御を開始しない場合は４３行目を変更
+  #REMOTE_CONTROL_TEST = True
+  REMOTE_CONTROL_TEST = False
+
+◎遠隔制御開始トリガーはオフにてあります。遠隔制御を開始する場合は４８行目を変更してください
+  MISSION_CONTROL_TEST = True
+  #MISSION_CONTROL_TEST = False
+
+
+
+
+
+

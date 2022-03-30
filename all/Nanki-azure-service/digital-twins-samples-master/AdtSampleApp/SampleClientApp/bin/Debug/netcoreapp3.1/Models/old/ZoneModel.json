@@ -1,0 +1,20 @@
+{
+  "@id": "dtmi:com:nec:example:Zone;1",
+  "@type": "Interface",
+  "displayName": "Zone Interface Model",
+  "@context": "dtmi:dtdl:context;2",
+  "contents": [
+    {
+      "@type": "Property",
+      "name": "DisplayName",
+      "schema": "string"
+    },
+    {
+      "@type": "Relationship",
+      "@id": "dtmi:com:nec:example:Zone:res_has_devices;1",
+      "name": "rel_has_devices",
+      "displayName": "Zone has devices",
+      "target": "dtmi:com:nec:example:Device;1"
+    }
+  ]
+}

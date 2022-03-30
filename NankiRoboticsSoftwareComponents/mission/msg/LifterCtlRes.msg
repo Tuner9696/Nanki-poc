@@ -1,0 +1,2 @@
+int32 liter_ctl_result
+int32 lifter_position

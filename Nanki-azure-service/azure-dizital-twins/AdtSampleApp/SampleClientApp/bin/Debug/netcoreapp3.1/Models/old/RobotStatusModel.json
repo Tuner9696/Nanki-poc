@@ -1,0 +1,72 @@
+{
+  "@id": "dtmi:neccom:DigitalTwins:RobotStatus;1",
+  "@type": "Interface",
+  "displayName": "RobotStatus interface model",
+  "@context": "dtmi:dtdl:context;2",
+  "contents": [
+    {
+      "@type": "Property",
+      "name": "DisplayName",
+      "schema": "string"
+    },
+    {
+      "@type": "Property",
+      "name": "Location",
+      "schema": "string"
+    },
+    {
+      "@type": "Property",
+      "name": "Status",
+      "schema": "string"
+    },
+    {
+      "@type": "Property",
+      "name": "PositoinX",
+      "schema": "double"
+    },
+    {
+      "@type": "Property",
+      "name": "PositoinY",
+      "schema": "double"
+    },
+    {
+      "@type": "Property",
+      "name": "ComfortIndex",
+      "schema": "double"
+    },
+    {
+      "@type": "Relationship",
+      "name": "contains",
+      "displayName": "contains",
+      "properties": [
+        {
+          "name": "ownershipUser",
+          "@type": "Property",
+          "schema": "string"
+        },
+        {
+          "name": "ownershipDepartment",
+          "@type": "Property",
+          "schema": "string"
+        }
+      ]
+    },
+    {
+      "@type": "Relationship",
+      "name": "serves",
+      "displayName": "serves",
+      "properties": [
+        {
+          "name": "ownershipUser",
+          "@type": "Property",
+          "schema": "string"
+        },
+        {
+          "name": "ownershipDepartment",
+          "@type": "Property",
+          "schema": "string"
+        }
+      ]
+    }
+  ]
+}

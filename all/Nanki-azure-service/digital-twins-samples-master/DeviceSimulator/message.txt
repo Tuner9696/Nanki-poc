@@ -1,0 +1,22 @@
+{"PositionX":4.94248610918526,"PositionY":13.496670573249773,"PositionZ":4.382946574773149,"PositionDegree":4.591317230179588,
+"Voltage":5.483157700152676,"Robot":"Robot001",
+"Status":"advertising","Temperature":12.072693734463627,"Humidity":16.7585255563066}
+
+
+
+{"Robot":"Robot001",
+"Robot_ID":"001",
+"Name":"thk001",
+"Vendor":"THK",
+"Product_Number":"THK Mover",
+"Product_Type":"Signage",
+"Position_x":5.3783389694887855,
+"Position_y":1.9523364128322975,
+"Position_z":13.56714634856542,
+"Position_Degree":10.502312463010806,
+"Floor":"1F",
+"Status":"advertising",
+"Voltage":10.81451677988028,
+"Eroor":"advertising",
+"Temperature":2.539558726148474,
+"Humidity":2.563738628553105}

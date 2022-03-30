@@ -1,0 +1,35 @@
+CreateModels Nankimodel Mover
+
+CreateDigitalTwin dtmi:com:nec:example:Nanki;2 南紀白浜空港
+CreateDigitalTwin dtmi:com:nec:example:Nanki;2 1階フロア
+CreateDigitalTwin dtmi:com:nec:example:Nanki;2 2階フロア
+CreateDigitalTwin dtmi:com:nec:example:Nanki;2 ゾーンA
+CreateDigitalTwin dtmi:com:nec:example:Nanki;2 ゾーンB
+CreateDigitalTwin dtmi:com:nec:example:Robot;1 Robot001 Temperature double 70  Name string THK Vendor string mover Product_Number string thk Product_Type string thk Floor string 1F Voltage string thk 
+CreateDigitalTwin dtmi:com:nec:example:Robot;1 Robot002 Temperature double 70 x Name string THK Vendor string mover Product_Number string thk Product_Type string thk Floor string 1F Voltage string thk
+CreateRelationship 南紀白浜空港 contains 1階フロア relationship1
+CreateRelationship 南紀白浜空港 contains 2階フロア relationship2
+CreateRelationship 1階フロア contains ゾーンA relationship3
+CreateRelationship 2階フロア contains ゾーンB relationship4
+CreateRelationship ゾーンA contains Robot001 relationship5
+CreateRelationship ゾーンA contains Robot002 relationship6
+
+
+CreateModels Nankimodel Mover
+CreateDigitalTwin dtmi:com:nec:example:Robot;1 Robot001 Temperature double 70
+
+CreateModels SpaceModel
+CreateDigitalTwin dtmi:contosocom:DigitalTwins:Space;1 thermostat67 Temperature double 70
+
+ 
+
+
+CreateDigitalTwin dtmi:com:nec:example:Robot;1 Robot001 Position Object x double 0 y double 0 z double 0 degree double 0
+
+SetupBuildingScenario
+ObserveProperties thermostat67 Temperature
+
+GetDigitalTwin Robot001
+
+UpdateDigitalTwin Robot001 add /Position Object [x double 0 y double 0 z double 0 degree double 0]
+

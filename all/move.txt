@@ -1,0 +1,3 @@
+[ INFO] [1646399245.343502882, 1624.876000000]: Recovery behavior will clear layer 'obstacles'
+[ INFO] [1646399245.373517766, 1624.906000000]: odom received!
+

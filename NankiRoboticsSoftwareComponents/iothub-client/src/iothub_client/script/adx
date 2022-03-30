@@ -1,0 +1,30 @@
+.create table TestTable (temperature: real, humidity: real)
+.create table TestTable ingestion json mapping 'TestMapping' '[{"column":"humidity","path":"$.humidity","datatype":"real"},{"column":"temperature","path":"$.temperature","datatype":"real"}]'
+
+
+
+.create table TestTable (Robot_ID: string)
+.create table TestTable ingestion json mapping 'TestMapping' '[{"column":"Robot_ID","path":"$.Robot_ID","datatype":"string"}]'
+
+
+
+.create table TestTable ingestion json mapping "JsonMapping1"
+    '['
+    '    { "column" : "Timespan", "Properties":{"Path":"$.timestamp"}},'
+    '    { "column" : "Metric", "Properties":{"Path":"$.metric"}},'
+    '    { "column" : "Value", "Properties":{"Path":"$.metric_value"}},'
+    '    { "column" : "IotHubDeviceId", "Properties":{"Path":"$.iothub-connection-device-id"}},'
+    '    { "column" : "IotHubSequenceNumber", "Properties":{"Path":"$.sequence-number"}}'
+    ']'
+
+
+
+.create-merge table TestTable (TimeStamp: datetime, Metric: string, Value: int, IotHubDeviceId:long, IotHubSequenceNumber:long)
+.create table TestTable ingestion json mapping "JsonMapping1"
+    '['
+    '    { "column" : "Timespan", "Properties":{"Path":"$.timestamp"}},'
+    '    { "column" : "Metric", "Properties":{"Path":"$.metric"}},'
+    '    { "column" : "Value", "Properties":{"Path":"$.metric_value"}},'
+    '    { "column" : "IotHubDeviceId", "Properties":{"Path":"$.iothub-connection-device-id"}},'
+    '    { "column" : "IotHubSequenceNumber", "Properties":{"Path":"$.sequence-number"}}'
+    ']'

@@ -1,0 +1,20 @@
+{
+  "@id": "dtmi:com:nec:example:Floor;1",
+  "@type": "Interface",
+  "displayName": "Floor Interface Model",
+  "@context": "dtmi:dtdl:context;2",
+  "contents": [
+    {
+      "@type": "Property",
+      "name": "DisplayName",
+      "schema": "string"
+    },
+    {
+      "@type": "Relationship",
+      "@id": "dtmi:com:nec:example:Floor:res_has_zones;1",
+      "name": "rel_has_zones",
+      "displayName": "Floor has zones",
+      "target": "dtmi:com:nec:example:Zone;1"
+    }
+  ]
+}

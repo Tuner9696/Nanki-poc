@@ -1,0 +1,2 @@
+int32 robot_id
+int32 lifter_control_kind

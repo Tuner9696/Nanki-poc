@@ -1,0 +1,31 @@
+{
+    "scriptFile": "__init__.py",
+    "bindings": [
+      {
+        "authLevel": "anonymous",
+        "name": "req",
+        "type": "httpTrigger",
+        "direction": "in",
+        "methods": [
+          "get",
+          "post"
+        ],
+        "route": "todoitems/{Vendor}"
+      },
+      {
+        "name": "$return",
+        "type": "http",
+        "direction": "out"
+      },
+      {
+        "type": "cosmosDB",
+        "name": "todoitems",
+        "direction": "in",
+        "connectionStringSetting": "CosmosDbConnectionString",
+        "databaseName": "Reearth",
+        "collectionName": "Countainer",
+        "sqlQuery": "SELECT * from c where c.Vendor = {Vendor} ORDER BY c.EventProcessedUtcTime DESC"
+      }
+    ],
+    "disabled": false
+  }

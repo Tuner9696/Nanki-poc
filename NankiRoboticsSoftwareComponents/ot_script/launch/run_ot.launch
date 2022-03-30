@@ -1,0 +1,11 @@
+<launch>
+  <node pkg="mission" name="mission" type="main.py" output="screen"/>
+  <node pkg="move_management" name="move_management0001" type="move_manager.py" output="screen"/>
+  <node pkg="move_control_component" name="move_control" type="device_motion_control.py"  output="screen"/>
+  <node pkg="obstacle_detector_component" name="obstacles0001" type="obstacle_dtc.py" />
+  <node pkg="remote_control_component" type="remote_controller.py" name="remote_control" />
+  <node pkg="external_application" name="interface_UI" type="external_api.py" />
+<!-- rviz -->
+  <node pkg="rviz" type="rviz" name="rviz" required="true"
+    args="-d /home/ncos/pj/nanki/rviz/4tr1r2.rviz"/>
+</launch>

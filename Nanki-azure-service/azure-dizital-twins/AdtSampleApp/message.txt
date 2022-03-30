@@ -1,0 +1,89 @@
+[{"value": "thk001","path": "/Name","op": "replace"},
+{"value": "THK","path": "/Vendor","op": "replace"},
+{"value": "THK Mover","path": "/ProductNumber","op": "replace"},
+{"value": "test","path": "/ProductType","op": "replace"},
+{"value": 13.5480493486617,"path": "/PositionX","op": "replace"},
+{"value": 3.6252161504818203,"path": "/PositionY","op": "replace"},
+{"value": 14.065401884291973,"path": "/PositionZ","op": "replace"},
+{"value": 14.202801317070984,"path": "/PositionDegree","op": "replace"},
+{"value": "advertising","path": "/Status","op": "replace"},
+{"value": 1.6128905125022357,"path": "/Battery","op": "replace"},
+{"value": 0,"path": "/Obstacle_flg","op": "replace"}]},
+"contenttype": "application/json","traceparent": "00-d3679b1d62ae4446b59ca87e6dc4968a-2560ec60caf34b4e-01"}
+
+
+2022-01-26T13:57:48.636 [Information] Event grid message!!!!!!!!:
+ {"data": {"modelId": "dtmi:com:nec:example:Robot;1","patch":
+  [{"value": "thk001","path": "/Name","op": "replace"},
+  {"value": "THK","path": "/Vendor","op": "replace"},
+  {"value": "THK Mover","path": "/ProductNumber","op": "replace"},
+  {"value": "test","path": "/ProductType","op": "replace"},
+  {"value": 3.7984707526855503,"path": "/PositionX","op": "replace"},
+  {"value": 1.7713053951837614,"path": "/PositionY","op": "replace"},
+  {"value": 4.149649689975031,"path": "/PositionZ","op": "replace"},
+  {"value": 4,"path": "/PositionDegree","op": "replace"},
+  {"value": "advertising","path": "/Status","op": "replace"},
+  {"value": 3,"path": "/Battery","op": "replace"},
+  {"value": 1,"path": "/Obstacle_flg","op": "replace"}]},
+  
+  
+  "contenttype": "application/json",
+"traceparent": "00-6a82a6f84437cb43954b55203a10c8d9-77a25677a9c51146-01"}
+
+
+            var patch1 = (JObject)eventGridData["data"]["patch"][1];
+            var patch2 = (JObject)eventGridData["data"]["patch"][2];
+            var patch3 = (JObject)eventGridData["data"]["patch"][3];
+            var patch4 = (JObject)eventGridData["data"]["patch"][4];
+            var patch5 = (JObject)eventGridData["data"]["patch"][5];
+            var patch6 = (JObject)eventGridData["data"]["patch"][6];
+            var patch7 = (JObject)eventGridData["data"]["patch"][7];
+            var patch8 = (JObject)eventGridData["data"]["patch"][8];
+            var patch9 = (JObject)eventGridData["data"]["patch"][9];
+            var patch10 = (JObject)eventGridData["data"]["patch"][10];
+            var patch11 = (JObject)eventGridData["data"]["patch"][11];
+
+
+
+
+            name = patch1["value"].ToString();
+            vendor = patch2["value"].ToString();
+            product_number = patch3["value"].ToString();
+            product_type = patch4["value"].ToString();
+            position_x = Math.Round(patch5["value"].ToObject<double>(), 2);
+            position_y = Math.Round(patch6["value"].ToObject<double>(), 2);
+            position_z = Math.Round(patch7["value"].ToObject<double>(), 2);
+            position_degree = Math.Round(patch8["value"].ToObject<double>(), 2);
+            status = patch9["value"].ToString();
+            battery = Math.Round(patch10["value"].ToObject<double>(), 2);
+            obstacle_flg = Math.Round(patch11["value"].ToObject<double>(), 2);
+
+
+            var message = new Dictionary<object, object>
+            {
+                { "name", name},
+                { "vendor", vendor},
+                { "product_number", product_number},
+                { "product_type", product_type},
+                { "positionX", position_x},
+                { "positionY", position_y},
+                { "positionZ", position_z},
+                { "position_Degree", position_degree},
+                { "status", status},
+                { "battery", battery},
+                { "obstacle_flg", obstacle_flg},
+
+            };
+
+
+             {"data": {"modelId": "dtmi:com:nec:example:Robot;1","patch":
+              [{"value": "thk001","path": "/Name","op": "replace"},
+              {"value": "THK","path": "/Vendor","op": "replace"},
+              {"value": "THK Mover","path": "/ProductNumber","op": "replace"},
+              {"value": "test","path": "/ProductType","op": "replace"},
+              {"value": 13.138603897829821,"path": "/PositionX","op": "replace"},
+             {"value": 3.424594257224628,"path": "/PositionY","op": "replace"},
+             {"value": 14.408824110594031,"path": "/PositionZ","op": "replace"},
+             {"value": 4,"path": "/PositionDegree","op": "replace"},
+             {"value": "advertising","path": "/Status","op": "replace"}]},
+             "contenttype": "application/json","traceparent": "00-2e3ca9e71586d048b2af398fcc453e6b-edd35f9955f1bf4c-01"}

@@ -1,0 +1,21 @@
+# 各ボタンのイベント
+bool button_cross
+bool button_circle
+bool button_triangle
+bool button_square
+bool button_l1
+bool button_r1
+bool button_l2
+bool button_r2
+bool button_share
+bool button_option
+bool button_ps
+bool button_l3
+bool button_r3
+
+# 変化量の状態
+float32 axes_lstick_angular
+float32 axes_lstick_fb
+float32 axes_l2
+float32 axes_rstick_lr
+float32 axes_r2

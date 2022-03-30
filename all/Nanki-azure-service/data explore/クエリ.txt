@@ -1,0 +1,20 @@
+0
+
+
+.create table NankiTest (Robot_ID: string, Name: string, Vendor : string, Product_Number: string, Product_Type: string , Position_x: real, Position_y: real, Position_z: real, Position_Degree: real, Status: string, Battery: real, Obstacle_flg: real, Floor: string, Eroor: real)
+.create table NankiTest ingestion json mapping 'NankiTest' '[{"column":"Robot_ID","path":"$.Robot_ID","datatype":"string"},{"column":"Name","path":"$.Name","datatype":"string"},{"column":"Vendor","path":"$.Vendor","datatype":"string"},{"column":"Product_Number","path":"$.Product_Number","datatype":"string"},{"column":"Product_Type","path":"$.Product_Type","datatype":"string"},{"column":"Position_x","path":"$.Position_x","datatype":"real"},{"column":"Position_y","path":"$.Position_y","datatype":"real"},{"column":"Position_z","path":"$.Position_z","datatype":"real"},{"column":"Position_Degree","path":"$.Position_Degree","datatype":"real"},{"column":"Status","path":"$.Status","datatype":"string"},{"column":"Battery","path":"$.Battery","datatype":"real"},{"column":"Obstacle_flg","path":"$.Obstacle_flg","datatype":"real"},{"column":"Floor","path":"$.Floor","datatype":"string"},{"column":"Eroor","path":"$.Eroor","datatype":"real"}]'
+
+
+.create table Test (Robot_ID: string)
+.create table Test ingestion json mapping 'Test' '[{"column":"Robot_ID","path":"$.Robot_ID","datatype":"string"}]'
+
+
+.create table Test2 (Robot_ID: real)
+.create table Test2 ingestion json mapping 'Test2' '[{"column":"Robot_ID","path":"$.Robot_ID","datatype":"real"}]'
+
+
+.create table Test3 (Robot_ID: string)
+.create table Test3 ingestion json mapping 'Test3' '[{"column":"Robot_ID","path":"$.Robot_ID","datatype":"string"}]'
+
+.create table NankiTest (Robot_ID: string, Name: string, Vendor : string, Product_Number: string, Product_Type: string , Position_x: real, Position_y: real, Position_z: real, Position_Degree: real, Status: string, Battery: real, Obstacle_flg: real, Floor: string, Eroor: real)
+.create table NankiTest ingestion json mapping 'NankiTest' '[{"column":"Robot_ID","path":"$.Robot_ID","datatype":"string"},{"column":"Name","path":"$.Name","datatype":"string"},{"column":"Vendor","path":"$.Vendor","datatype":"string"},{"column":"Product_Number","path":"$.Product_Number","datatype":"string"},{"column":"Product_Type","path":"$.Product_Type","datatype":"string"},{"column":"Position_x","path":"$.Position_x","datatype":"real"},{"column":"Position_y","path":"$.Position_y","datatype":"real"},{"column":"Position_z","path":"$.Position_z","datatype":"real"},{"column":"Position_Degree","path":"$.Position_Degree","datatype":"real"},{"column":"Status","path":"$.Status","datatype":"string"},{"column":"Battery","path":"$.Battery","datatype":"real"},{"column":"Obstacle_flg","path":"$.Obstacle_flg","datatype":"real"},{"column":"Floor","path":"$.Floor","datatype":"string"},{"column":"Eroor","path":"$.Eroor","datatype":"real"}]'

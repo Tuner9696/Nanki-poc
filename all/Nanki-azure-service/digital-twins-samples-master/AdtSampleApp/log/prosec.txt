@@ -1,0 +1,6 @@
+2022-02-15T09:47:06.649 [Information] Executed 'ProcessHubToDTEvents' (Succeeded, Id=6b90198e-c8b8-4c8a-98b9-74a64b2ca65a, Duration=2ms)
+2022-02-15T09:47:06.652 [Information] Executing 'ProcessHubToDTEvents' (Reason='EventGrid trigger fired at 2022-02-15T09:47:06.6519698+00:00', Id=7e98bea3-c09f-4ec2-bb95-90145efda00e)
+2022-02-15T09:47:06.652 [Information] {"properties": {},"systemProperties": {"iothub-content-type": "application/json","iothub-content-encoding": 
+"utf-8","iothub-connection-device-id": "Nanki-test-device",
+"iothub-connection-auth-method": "{\"scope\":\"device\",\"type\":\"sas\",\"issuer\":\"iothub\",\"acceptingIpFilterRule\":null}","iothub-connection-auth-generation-id": "637800557027794859","iothub-enqueuedtime": "2022-02-15T09:47:06.423Z","iothub-message-source": "Telemetry"},"body": {"Robot_ID": "002","Name": "thk001","Vendor": "THK","Product_Number": "THK Mover","Product_Type": "test","Position_x": 6,"Position_y": 12.130907309302552,"Position_z": 13.16243765091637,"Position_Degree": 4,
+"Status": "adver","Battery": 7.9164139940014175,"Obstacle_flg": 1,"Floor": "9F","Eroor": "add"}}

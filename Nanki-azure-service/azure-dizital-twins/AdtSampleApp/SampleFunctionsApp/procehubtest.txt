@@ -1,0 +1,7 @@
+{\"scope\":\"device\",\"type\":\"sas\",\"issuer\":\"iothub\",\"acceptingIpFilterRule\":null}",
+"iothub-connection-auth-generation-id": "637770101619599654",
+"iothub-enqueuedtime": "2022-01-15T16:51:03.296Z","iothub-message-source": "Telemetry"},
+"body": {"Robot": "Robot001","Name": "aa","Temperature": 4.552636507224588,
+"Humidity": 19.465057579551384}}
+2022-01-15T16:51:03.650 [Information] Device:Robot001 Temperature is:4.552636507224588
+)

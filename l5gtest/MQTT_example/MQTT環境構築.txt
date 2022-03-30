@@ -1,0 +1,27 @@
+MQTT 環境構築
+
+# 管制PC側
+# MQTTブローカーインストール＆起動
+$ sudo apt install mosquitto
+
+# MQTTブローカー状態確認
+$ systemctl status mosquitto
+
+# MQTTクライアントツールインストール
+$ sudo apt install mosquitto-clients
+
+# メッセージ受信待ち
+$ mosquitto_sub -t 'testpub' -v
+
+# メッセージ送信（同じOSにブローカー起動）
+$ mosquitto_pub -t 'testsub' -m 'hello world'
+
+# ロボPC側
+# MQTTクライアントツールインストール
+$ sudo apt install mosquitto-clients
+
+# メッセージ送信（別マシンでブローカー起動）
+$ mosquitto_pub -h 192.168.0.13 -t 'test/topic' -m 'hello world'
+
+# メッセージ受信（別マシンでブローカー起動）
+$ mosquitto_sub -h 192.168.0.13 -t 'test/topic' -v

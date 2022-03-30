@@ -1,0 +1,2 @@
+int32 lifter_control_result
+int32 lifter_position

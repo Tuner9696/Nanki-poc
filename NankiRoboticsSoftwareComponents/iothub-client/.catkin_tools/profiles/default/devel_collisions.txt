@@ -1,0 +1,1 @@
+/home/nec/work/kuroki/pj/all/iothub-client/devel/./cmake.lock 1

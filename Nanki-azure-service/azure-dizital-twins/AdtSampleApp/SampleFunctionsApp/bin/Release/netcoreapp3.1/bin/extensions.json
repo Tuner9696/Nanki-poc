@@ -1,0 +1,6 @@
+{
+  "extensions":[
+    { "name": "EventGrid", "typeName":"Microsoft.Azure.WebJobs.Extensions.EventGrid.EventGridWebJobsStartup, Microsoft.Azure.WebJobs.Extensions.EventGrid, Version=2.1.0.0, Culture=neutral, PublicKeyToken=014045d636e89289"},
+    { "name": "SignalR", "typeName":"Microsoft.Azure.WebJobs.Extensions.SignalRService.SignalRWebJobsStartup, Microsoft.Azure.WebJobs.Extensions.SignalRService, Version=1.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60"}
+  ]
+}
