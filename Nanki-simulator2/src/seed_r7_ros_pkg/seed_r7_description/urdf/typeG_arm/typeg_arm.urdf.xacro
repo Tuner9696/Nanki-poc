@@ -1,0 +1,304 @@
+<?xml version="1.0"?>
+
+<!-- XML namespaces -->
+<robot name="arm_upper" xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <xacro:include filename="$(find seed_r7_description)/urdf/gazebo.xacro" />
+
+  <xacro:macro name="arm_upper" params="base_link disable_mesh:=false r_hand_link:=r_hand_link">
+  <!-- ============================   typeG_arm   ============================ -->
+  <link name="${base_link}">
+    <xacro:unless value="${disable_mesh}"> <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://seed_r7_description/meshes/typeG_arm/waist_link.dae" scale="1 1 1" />
+      </geometry>
+    </visual> </xacro:unless>
+    <xacro:unless value="${disable_mesh}"> <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://seed_r7_description/meshes/typeG_arm/waist_link.dae" scale="1 1 1" />
+      </geometry>
+    </collision> </xacro:unless>
+    <inertial>
+      <mass value="0.820" />
+      <origin xyz="-0.001 0 0.005" rpy="0 0 0"/>
+      <inertia ixx="-0.00348" ixy="0" ixz="0" iyy="0.00199" iyz="0" izz="0.00545"/>
+    </inertial>
+  </link>
+  <xacro:gazebo_link_reference link_name="${base_link}" />
+
+  <link name="shoulder_link">
+    <xacro:unless value="${disable_mesh}"> <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://seed_r7_description/meshes/typeG_arm/shoulder_link.dae" scale="1 1 1" />
+      </geometry>
+    </visual> </xacro:unless>
+    <xacro:unless value="${disable_mesh}"> <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://seed_r7_description/meshes/typeG_arm/shoulder_link.dae" scale="1 1 1" />
+      </geometry>
+    </collision> </xacro:unless>
+    <inertial>
+      <mass value="0.982" />
+      <origin xyz="-0.004 0 0.061" rpy="0 -0 0"/>
+      <inertia ixx="0.00186" ixy="0" ixz="0" iyy="0.00198" iyz="0" izz="0.00058"/>
+    </inertial>
+  </link>
+  <xacro:gazebo_link_reference link_name="shoulder_link" />
+
+  <link name="upperarm_link">
+    <xacro:unless value="${disable_mesh}"> <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://seed_r7_description/meshes/typeG_arm/upperarm_link.dae" scale="1 1 1" />
+      </geometry>
+    </visual> </xacro:unless>
+    <xacro:unless value="${disable_mesh}"> <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://seed_r7_description/meshes/typeG_arm/upperarm_link.dae" scale="1 1 1" />
+      </geometry>
+    </collision> </xacro:unless>
+    <inertial>
+     <mass value="0.496" />
+      <origin xyz="-0.012 0 0.142" rpy="0 -0 0"/>
+      <inertia ixx="0.00504" ixy="0" ixz="0" iyy="0.00516" iyz="0" izz="0.00074"/>
+    </inertial>
+  </link>
+  <xacro:gazebo_link_reference link_name="upperarm_link" />
+
+  <link name="elbow_virtual_link">
+    <inertial>
+      <mass value="0.001" />
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.01"/>
+    </inertial>
+  </link>
+  <xacro:gazebo_link_reference link_name="elbow_virtual_link" />
+
+  <link name="elbow_virtual_link_dummy">
+    <inertial>
+      <mass value="0.001" />
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.01"/>
+    </inertial>
+  </link>
+  <xacro:gazebo_link_reference link_name="elbow_virtual_link_dummy" />
+
+  <link name="elbow_middle_link">
+    <xacro:unless value="${disable_mesh}"> <visual>
+      <origin xyz="0 0 0" rpy="0 0.928689695 0"/>
+      <geometry>
+        <mesh filename="package://seed_r7_description/meshes/typeG_arm/elbow_middle_link.dae" scale="1 1 1" />
+      </geometry>
+    </visual> </xacro:unless>
+    <xacro:unless value="${disable_mesh}"> <collision>
+      <origin xyz="0 0 0" rpy="0 0.928689695 0"/>
+      <geometry>
+        <mesh filename="package://seed_r7_description/meshes/typeG_arm/elbow_middle_link.dae" scale="1 1 1" />
+      </geometry>
+    </collision> </xacro:unless>
+    <inertial>
+      <mass value="0.193" />
+      <origin xyz="0.010 0 0.032" rpy="0 0.928689695 0"/>
+      <inertia ixx="0.00030" ixy="0" ixz="0" iyy="0.00030" iyz="0" izz="0.00011"/>
+    </inertial>
+  </link>
+  <xacro:gazebo_link_reference link_name="elbow_middle_link" />
+
+  <link name="elbow_link">
+    <xacro:unless value="${disable_mesh}"> <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://seed_r7_description/meshes/typeG_arm/elbow_link.dae" scale="1 1 1" />
+      </geometry>
+    </visual> </xacro:unless>
+    <xacro:unless value="${disable_mesh}"> <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://seed_r7_description/meshes/typeG_arm/elbow_link.dae" scale="1 1 1" />
+      </geometry>
+    </collision> </xacro:unless>
+    <inertial>
+      <mass value="0.480" />
+      <origin xyz="0.069 0 0" rpy="0 -0 0"/>
+      <inertia ixx="0.00018" ixy="0" ixz="0" iyy="0.00045" iyz="0" izz="0.00047"/>
+    </inertial>
+  </link>
+  <xacro:gazebo_link_reference link_name="elbow_link" />
+
+  <link name="forearm_link">
+    <parent link="forearm_link"/>
+    <child  link="wrist_r_link"/>
+    <xacro:unless value="${disable_mesh}"> <visual>
+      <origin xyz="0 0 0" rpy="3.14 0 0"/>
+      <geometry>
+        <mesh filename="package://seed_r7_description/meshes/typeG_arm/forearm_link.dae" scale="1 1 1" />
+      </geometry>
+    </visual> </xacro:unless>
+    <xacro:unless value="${disable_mesh}"> <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://seed_r7_description/meshes/typeG_arm/forearm_link.dae" scale="1 1 1" />
+      </geometry>
+    </collision> </xacro:unless>
+    <inertial>
+      <mass value="0.262" />
+      <origin xyz="0.045 0 0" rpy="0 -0 0"/>
+      <inertia ixx="0.00020" ixy="0" ixz="0" iyy="0.00051" iyz="0" izz="0.00054"/>
+    </inertial>
+  </link>
+  <xacro:gazebo_link_reference link_name="forearm_link" />
+
+  <link name="wrist_r_link">
+    <xacro:unless value="${disable_mesh}"> <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://seed_r7_description/meshes/typeG_arm/wrist_r_link.dae" scale="1 1 1" />
+      </geometry>
+    </visual> </xacro:unless>
+    <xacro:unless value="${disable_mesh}"> <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://seed_r7_description/meshes/typeG_arm/wrist_r_link.dae" scale="1 1 1" />
+      </geometry>
+    </collision> </xacro:unless>
+    <inertial>
+      <mass value="0.009" />
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <inertia ixx="0.00001" ixy="0" ixz="0" iyy="0.00001" iyz="0" izz="0.00001"/>
+    </inertial>
+  </link>
+  <xacro:gazebo_link_reference link_name="wrist_r_link" />
+
+  <link name="wrist_p_link">
+    <xacro:unless value="${disable_mesh}"> <visual>
+      <origin xyz="0 0 0" rpy="3.14 0 0"/>
+      <geometry>
+        <mesh filename="package://seed_r7_description/meshes/typeG_arm/wrist_p_link.dae" scale="1 1 1" />
+      </geometry>
+    </visual> </xacro:unless>
+    <xacro:unless value="${disable_mesh}"> <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://seed_r7_description/meshes/typeG_arm/wrist_p_link.dae" scale="1 1 1" />
+      </geometry>
+    </collision> </xacro:unless>
+    <inertial>
+      <mass value="0.025" />
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <inertia ixx="0.00001" ixy="0" ixz="0" iyy="0.00005" iyz="0" izz="0.00001"/>
+    </inertial>
+  </link>
+  <xacro:gazebo_link_reference link_name="wrist_p_link" />
+
+   <!--<joint name="waist_connector" type="fixed">
+    <parent link="${base_link}"/>
+    <child  link="shoulder_link"/>
+    <origin xyz="0.0 0.0 0.0005" rpy="0 0 0 "/>
+  </joint>
+  <xacro:gazebo_transmission joint_name="waist_connector" />-->
+
+  <joint name="shoulder_y_joint" type="revolute">
+    <parent link="${base_link}"/>
+    <child  link="shoulder_link"/>
+    <origin xyz="0 0 0.01" rpy="0 0 0 "/>
+    <axis   xyz="0 0 1"/>-->
+    <!-- from -120 to 120 degrees-->
+    <limit lower="-2.09" upper="2.09" effort="100" velocity="1.2" />
+    <dynamics damping="0.2" friction="0" />
+  </joint>
+  <xacro:gazebo_transmission joint_name="shoulder_y_joint" />
+
+  <joint name="shoulder_p_joint" type="revolute">
+    <parent link="shoulder_link"/>
+    <child  link="upperarm_link"/>
+    <origin xyz="0.0 0.0 0.1215" rpy="0 0 0 "/>
+    <axis   xyz="0 1 0"/>
+    <!-- from 0 to 90 degrees-->
+    <limit lower="0" upper="1.57" effort="200" velocity="0.6" />
+    <dynamics damping="0.2" friction="0" />
+  </joint>
+  <xacro:gazebo_transmission joint_name="shoulder_p_joint" />
+
+  <joint name="elbow_joint" type="revolute">
+    <parent link="upperarm_link"/>
+    <child  link="elbow_virtual_link"/>
+    <origin xyz="0.0 0.0 0.3" rpy="0 0 0 "/>
+    <axis   xyz="0 1 0"/>
+    <!-- from -90 to 90 degrees-->
+    <limit lower="-1.57" upper="1.57" effort="100" velocity="1.2" />
+    <dynamics damping="0.2" friction="0" />
+  </joint>
+  <xacro:gazebo_transmission joint_name="elbow_joint" />
+
+  <joint name="elbow_joint_mimic" type="continuous">
+    <parent link="elbow_virtual_link"/>
+    <child  link="elbow_virtual_link_dummy"/>
+    <origin xyz="0.0 0 0" rpy="0 0 0 "/>
+    <axis   xyz="0 1 0"/>
+    <mimic joint="elbow_joint" multiplier="-1" offset="0" />
+  </joint>
+
+  <joint name="elbow_middle_joint" type="continuous">
+    <parent link="elbow_virtual_link_dummy"/>
+    <child  link="elbow_middle_link"/>
+    <origin xyz="0.0 0 0" rpy="0 0 0 "/>
+    <axis   xyz="0 1 0"/>
+    <mimic joint="elbow_joint" multiplier="0.5" offset="0" />
+  </joint>
+
+  <joint name="elbow_middle_joint_mimic" type="continuous">
+    <parent link="elbow_middle_link"/>
+    <child  link="elbow_link"/>
+    <origin xyz="0.056061 0 0.041918" rpy="0 0 0 "/>
+    <axis   xyz="0 1 0"/>
+    <mimic joint="elbow_joint" multiplier="0.5" offset="0" />
+  </joint>
+
+  <joint name="wrist_y_joint" type="revolute">
+    <parent link="elbow_link"/>
+    <child  link="forearm_link"/>
+    <origin xyz="0.1095 0 0.0" rpy="0 0 0 "/>
+    <axis   xyz="1 0 0"/>
+    <!-- from -120 to 120 degrees-->
+    <limit lower="-2.09" upper="2.09" effort="100" velocity="1.3" />
+    <dynamics damping="0.2" friction="0" />
+  </joint>
+  <xacro:gazebo_transmission joint_name="wrist_y_joint" />
+
+  <joint name="wrist_r_joint" type="revolute">
+    <parent link="forearm_link"/>
+    <child  link="wrist_r_link"/>
+    <origin xyz="0.124 0 0" rpy="0 0 0 "/>
+    <axis   xyz="0 0 1"/>
+    <!-- from -10 to 10 degrees-->
+    <limit lower="-0.17" upper="0.17" effort="100" velocity="1.05" />
+    <dynamics damping="0.2" friction="0" />
+  </joint>
+  <xacro:gazebo_transmission joint_name="wrist_r_joint" />
+
+  <joint name="wrist_p_joint" type="revolute">
+    <parent link="wrist_r_link"/>
+    <child  link="wrist_p_link"/>
+    <origin xyz="0 0 0" rpy="0 0 0 "/>
+    <axis   xyz="0 1 0"/>
+    <!-- from -90 to 17 degrees-->
+    <limit lower="-0.30" upper="1.57" effort="100" velocity="1.4" />
+    <dynamics damping="0.2" friction="0" />
+  </joint>
+  <xacro:gazebo_transmission joint_name="wrist_p_joint" />
+
+  <joint name="wrist_connector" type="fixed">
+    <parent link="wrist_p_link"/>
+    <child  link="${r_hand_link}"/>
+    <origin xyz="0 0 -0.003" rpy="-1.5707 0 1.5707 "/>
+    <!-- from -25 to 85 degrees-->
+  </joint>
+
+  </xacro:macro>
+
+</robot>

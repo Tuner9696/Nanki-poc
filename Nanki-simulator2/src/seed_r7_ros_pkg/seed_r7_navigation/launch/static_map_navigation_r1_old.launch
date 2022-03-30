@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<launch>
+      
+	<!-- Run the map server -->
+  <arg name="map_localization_file" default="$(find seed_r7_navigation)/maps/map.yaml"/>
+  <arg name="map_keepout_file" default="$(arg map_localization_file)" />
+  <arg name="costmap_common_config" default="$(find seed_r7_navigation)/config/arm/costmap_common.yaml"/>
+  <arg name="costmap_local_config" default="$(find seed_r7_navigation)/config/arm/costmap_local.yaml"/>
+ 
+  <group ns="r1">
+  <node name="map_localization_server" pkg="map_server" type="map_server" args="$(arg map_localization_file)"/>
+  <node name="map_planning_server"     pkg="map_server" type="map_server" args="$(arg map_keepout_file)">
+	  <remap from="map" to="map_keepout"/>
+  </node>
+
+  <!--- Run AMCL -->
+  <include file="$(find seed_r7_navigation)/launch/amcl_r1.launch" />
+
+  <!--- Run Move Base -->
+  <include file="$(find seed_r7_navigation)/launch/move_base_r1.launch">
+    <arg name="costmap_common_config" value="$(arg costmap_common_config)" />
+    <arg name="costmap_local_config" value="$(arg costmap_local_config)" />
+
+  </include>
+  </group>
+
+ <!-- rviz -->
+    <node pkg="rviz" type="rviz" name="rviz" required="true"
+          args="-d $(find seed_r7_navigation)/rviz/default.rviz"/>
+
+
+</launch>

@@ -1,0 +1,419 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <world name="default">
+    <gui>
+      <camera name="user_camera">
+        <pose>-5 -7 4 0 0.54 0.76</pose>
+      </camera>
+    </gui>
+    <physics type='ode'>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>0.0</real_time_update_rate>
+      <max_step_size>0.002</max_step_size>
+    </physics>
+    <scene>
+      <ambient>0.7 0.7 0.7 1</ambient>
+      <background>0.1 0.1 0.1 1</background>
+    </scene>
+
+    <!--base-->
+    <include>
+      <uri>model://sun</uri>
+    </include>
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <!--train-->
+    <include>
+      <name>train1</name>
+      <uri>model://1900_tP_yanenasi</uri>
+      <static>true</static>
+      <pose>-5 10 0 0 0 0</pose>
+    </include>
+    <include>
+      <name>train2</name>
+      <uri>model://1900_sP_yanenasi</uri>
+      <static>true</static>
+      <pose>-5 -14.5 0 0 0 0</pose>
+    </include>
+    <include>
+      <name>train3</name>
+      <uri>model://1900_tP_yanenasi</uri>
+      <static>true</static>
+      <pose>5 10 0 0 0 0</pose>
+    </include>
+    <include>
+      <name>train4</name>
+      <uri>model://1900_sP_yanenasi</uri>
+      <static>true</static>
+      <pose>5 -14.5 0 0 0 0</pose>
+    </include>
+
+    <!--senro-->
+    <include>
+      <name>senro1</name>
+      <uri>model://kensyako_senro</uri>
+      <static>true</static>
+      <pose>-5 0 0 0 0 0</pose>
+    </include>
+    <include>
+      <name>senro2</name>
+      <uri>model://kensyako_senro</uri>
+      <static>true</static>
+      <pose>-5 -40 0 0 0 0</pose>
+    </include>
+    <include>
+      <name>senro3</name>
+      <uri>model://kensyako_senro</uri>
+      <static>true</static>
+      <pose>5 0 0 0 0 0</pose>
+    </include>
+    <include>
+      <name>senro4</name>
+      <uri>model://kensyako_senro</uri>
+      <static>true</static>
+      <pose>5 -40 0 0 0 0</pose>
+    </include>
+
+    <!--wall-->
+    <include>
+      <name>wall1</name>
+      <uri>model://wallparts_A</uri>
+      <static>true</static>
+      <pose>-17.55 -33.3 0 0 0 -1.5708</pose>
+    </include>
+    <include>
+      <name>wall2</name>
+      <uri>model://wallparts_A</uri>
+      <static>true</static>
+      <pose>-17.55 -22.2 0 0 0 -1.5708</pose>
+    </include>
+    <include>
+      <name>wall3</name>
+      <uri>model://wallparts_A</uri>
+      <static>true</static>
+      <pose>-17.55 -11.1 0 0 0 -1.5708</pose>
+    </include>
+    <include>
+      <name>wall4</name>
+      <uri>model://wallparts_A</uri>
+      <static>true</static>
+      <pose>-17.55 0 0 0 0 -1.5708</pose>
+    </include>
+    <include>
+      <name>wall5</name>
+      <uri>model://wallparts_A</uri>
+      <static>true</static>
+      <pose>-17.55 11.1 0 0 0 -1.5708</pose>
+    </include>
+    <include>
+      <name>wall6</name>
+      <uri>model://wallparts_A</uri>
+      <static>true</static>
+      <pose>-17.55 22.2 0 0 0 -1.5708</pose>
+    </include>
+
+    <include>
+      <name>wall7</name>
+      <uri>model://wallparts_A</uri>
+      <static>true</static>
+      <pose>-11.1 27 0 0 0 3.1416</pose>
+    </include>
+    <include>
+      <name>wall8</name>
+      <uri>model://wallparts_A</uri>
+      <static>true</static>
+      <pose>0 27 0 0 0 3.1416</pose>
+    </include>
+    <include>
+      <name>wall9</name>
+      <uri>model://wallparts_A</uri>
+      <static>true</static>
+      <pose>11.1 27 0 0 0 3.1416</pose>
+    </include>
+    <include>
+      <name>wall10</name>
+      <uri>model://wallparts_A</uri>
+      <static>true</static>
+      <pose>22.2 27 0 0 0 3.1416</pose>
+    </include>
+
+    <include>
+      <name>wall11</name>
+      <uri>model://wallparts_A</uri>
+      <static>true</static>
+      <pose>27.05 -34.94 0 0 0 1.5708</pose>
+    </include>
+    <include>
+      <name>wall12</name>
+      <uri>model://wallparts_A</uri>
+      <static>true</static>
+      <pose>27.05 -23.84 0 0 0 1.5708</pose>
+    </include>
+    <include>
+      <name>wall13</name>
+      <uri>model://wallparts_A</uri>
+      <static>true</static>
+      <pose>27.05 -12.74 0 0 0 1.5708</pose>
+    </include>
+    <include>
+      <name>wall14</name>
+      <uri>model://wallparts_A</uri>
+      <static>true</static>
+      <pose>27.05 -1.64 0 0 0 1.5708</pose>
+    </include>
+    <include>
+      <name>wall15</name>
+      <uri>model://wallparts_A</uri>
+      <static>true</static>
+      <pose>27.05 9.46 0 0 0 1.5708</pose>
+    </include>
+    <include>
+      <name>wall16</name>
+      <uri>model://wallparts_A</uri>
+      <static>true</static>
+      <pose>27.05 20.5856 0 0 0 1.5708</pose>
+    </include>
+
+    <include>
+      <name>wall17</name>
+      <uri>model://wallparts_B</uri>
+      <static>true</static>
+      <pose>20 21 0 0 0 -3.1416</pose>
+    </include>
+
+    <!--object-->
+    <include>
+      <name>kaidan1</name>
+      <uri>model://kensyako_kaidan</uri>
+      <static>true</static>
+      <pose>8.2 -33.3 2.8 0 0 0</pose>
+    </include>
+    <include>
+      <name>kaidan2</name>
+      <uri>model://kensyako_kaidan</uri>
+      <static>true</static>
+      <pose>8.2 22.2 2.8 0 0 3.1416</pose>
+    </include>
+    <include>
+      <name>board1</name>
+      <uri>model://kensyako_board</uri>
+      <static>true</static>
+      <pose>8.2 -5.5 4.54 0 0 0</pose>
+    </include>
+
+    <include>
+      <name>kaidan3</name>
+      <uri>model://kensyako_kaidan</uri>
+      <static>true</static>
+      <pose>1.8 -33.3 2.8 0 0 0</pose>
+    </include>
+    <include>
+      <name>kaidan4</name>
+      <uri>model://kensyako_kaidan</uri>
+      <static>true</static>
+      <pose>1.8 22.2 2.8 0 0 3.1416</pose>
+    </include>
+    <include>
+      <name>board2</name>
+      <uri>model://kensyako_board</uri>
+      <static>true</static>
+      <pose>1.8 -5.5 4.54 0 0 0</pose>
+    </include>
+
+    <include>
+      <name>kaidan5</name>
+      <uri>model://kensyako_kaidan</uri>
+      <static>true</static>
+      <pose>-1.8 -33.3 2.8 0 0 0</pose>
+    </include>
+    <include>
+      <name>kaidan6</name>
+      <uri>model://kensyako_kaidan</uri>
+      <static>true</static>
+      <pose>-1.8 22.2 2.8 0 0 3.1416</pose>
+    </include>
+    <include>
+      <name>board3</name>
+      <uri>model://kensyako_board</uri>
+      <static>true</static>
+      <pose>-1.8 -5.5 4.54 0 0 0</pose>
+    </include>
+
+    <include>
+      <name>kaidan7</name>
+      <uri>model://kensyako_kaidan</uri>
+      <static>true</static>
+      <pose>-8.2 -33.3 2.8 0 0 0</pose>
+    </include>
+    <include>
+      <name>kaidan8</name>
+      <uri>model://kensyako_kaidan</uri>
+      <static>true</static>
+      <pose>-8.2 22.2 2.8 0 0 3.1416</pose>
+    </include>
+    <include>
+      <name>board4</name>
+      <uri>model://kensyako_board</uri>
+      <static>true</static>
+      <pose>-8.2 -5.5 4.54 0 0 0</pose>
+    </include>
+
+    <include>
+      <name>console1</name>
+      <uri>model://control_console</uri>
+      <static>true</static>
+      <pose>8.2 20 0 0 0 1.5708</pose>
+    </include>
+    <include>
+      <name>console2</name>
+      <uri>model://control_console</uri>
+      <static>true</static>
+      <pose>-8.2 20 0 0 0 -1.5708</pose>
+    </include>
+    <include>
+      <name>console3</name>
+      <uri>model://control_console</uri>
+      <static>true</static>
+      <pose>8.2 -20 0 0 0 1.5708</pose>
+    </include>
+    <include>
+      <name>console4</name>
+      <uri>model://control_console</uri>
+      <static>true</static>
+      <pose>-8.2 -20 0 0 0 -1.5708</pose>
+    </include>
+
+    <include>
+      <name>pillar1</name>
+      <uri>model://pillar</uri>
+      <static>true</static>
+      <pose>15 15 0 0 0 0</pose>
+    </include>
+    <include>
+      <name>pillar2</name>
+      <uri>model://pillar</uri>
+      <static>true</static>
+      <pose>15 0 0 0 0 0</pose>
+    </include>
+    <include>
+      <name>pillar3</name>
+      <uri>model://pillar</uri>
+      <static>true</static>
+      <pose>15 -15 0 0 0 0</pose>
+    </include>
+    <include>
+      <name>pillar4</name>
+      <uri>model://pillar</uri>
+      <static>true</static>
+      <pose>0 15 0 0 0 0</pose>
+    </include>
+    <include>
+      <name>pillar5</name>
+      <uri>model://pillar</uri>
+      <static>true</static>
+      <pose>0 0 0 0 0 0</pose>
+    </include>
+    <include>
+      <name>pillar6</name>
+      <uri>model://pillar</uri>
+      <static>true</static>
+      <pose>0 -15 0 0 0 0</pose>
+    </include>
+    <include>
+      <name>pillar7</name>
+      <uri>model://pillar</uri>
+      <static>true</static>
+      <pose>-15 15 0 0 0 0</pose>
+    </include>
+    <include>
+      <name>pillar8</name>
+      <uri>model://pillar</uri>
+      <static>true</static>
+      <pose>-15 0 0 0 0 0</pose>
+    </include>
+    <include>
+      <name>pillar9</name>
+      <uri>model://pillar</uri>
+      <static>true</static>
+      <pose>-15 -15 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <name>sunoko1</name>
+      <uri>model://sunoko</uri>
+      <static>true</static>
+      <pose>15.8 13.8 0 0 0 0</pose>
+    </include>
+    <include>
+      <name>sunoko2</name>
+      <uri>model://sunoko</uri>
+      <static>true</static>
+      <pose>18.1 13.8 0 0 0 0</pose>
+    </include>
+    <include>
+      <name>sunoko3</name>
+      <uri>model://sunoko</uri>
+      <static>true</static>
+      <pose>15.8 11.8 0 0 0 0</pose>
+    </include>
+    <include>
+      <name>sunoko4</name>
+      <uri>model://sunoko</uri>
+      <static>true</static>
+      <pose>18.1 11.8 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <name>rack1</name>
+      <uri>model://rack_empty_15</uri>
+      <static>true</static>
+      <pose>26 0 0 0 0 0</pose>
+    </include>
+    <include>
+      <name>rack2</name>
+      <uri>model://rack_empty_15</uri>
+      <static>true</static>
+      <pose>26 3.2 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <name>rack3</name>
+      <uri>model://rack_empty_15</uri>
+      <static>true</static>
+      <pose>24.2 12 0 0 0 1.5718</pose>
+    </include>
+    <include>
+      <name>rack4</name>
+      <uri>model://rack_empty_15</uri>
+      <static>true</static>
+      <pose>21 12 0 0 0 1.5718</pose>
+    </include>
+    <include>
+      <name>rack5</name>
+      <uri>model://rack_empty_15</uri>
+      <static>true</static>
+      <pose>24.2 13.6 0 0 0 1.5718</pose>
+    </include>
+    <include>
+      <name>rack6</name>
+      <uri>model://rack_empty_15</uri>
+      <static>true</static>
+      <pose>21 13.6 0 0 0 1.5718</pose>
+    </include>
+    <include>
+      <name>rack7</name>
+      <uri>model://rack_empty_15</uri>
+      <static>true</static>
+      <pose>26 9.5 0 0 0 0</pose>
+    </include>
+    <include>
+      <name>rack8</name>
+      <uri>model://rack_empty_15</uri>
+      <static>true</static>
+      <pose>26 6.4 0 0 0 0</pose>
+    </include>
+  </world>
+</sdf>
+

@@ -1,0 +1,7 @@
+image: /home/nec/work/kuroki/pj/all/nanki_mover/src/seed_r7_ros_pkg/seed_r7_navigation/maps/map.pgm
+resolution: 0.025000
+origin: [-23.600000, -25.200000, 0.000000]
+negate: 0
+occupied_thresh: 0.65
+free_thresh: 0.196
+

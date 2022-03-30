@@ -1,0 +1,6 @@
+# 地図ファイルへのディレクトリパス合わせ
+
+以下ファイルの中の地図ファイルへのディレクトリパスを変更してから起動する
+
+src/seed_r7_ros_pkg/seed_r7_navigation/maps/map.yaml
+このファイルのimage:行

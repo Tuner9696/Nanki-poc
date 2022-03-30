@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<launch>
+      
+
+	<!--- Run gmapping -->
+  <include file="$(find seed_r7_navigation)/launch/gmapping_r1.launch" />
+
+  <!--- Run Move Base -->
+  <include file="$(find seed_r7_navigation)/launch/move_base_r1_making.launch">
+	  <arg name="map_topic" value="map"/>
+  </include>
+
+
+ <!-- rviz -->
+    <node pkg="rviz" type="rviz" name="rviz" required="true"
+          args="-d $(find seed_r7_navigation)/rviz/default.rviz"/>
+
+
+</launch>

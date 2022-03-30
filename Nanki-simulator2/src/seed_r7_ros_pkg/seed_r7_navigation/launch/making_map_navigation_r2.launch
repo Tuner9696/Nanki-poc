@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<launch>
+      
+
+	<!--- Run gmapping -->
+  <include file="$(find seed_r7_navigation)/launch/gmapping_r2.launch" />
+
+  <!--- Run Move Base -->
+  <include file="$(find seed_r7_navigation)/launch/move_base_r2_making.launch">
+	  <arg name="map_topic" value="map"/>
+  </include>
+
+
+</launch>
